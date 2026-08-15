@@ -183,7 +183,7 @@ func _get_property_list() -> Array[Dictionary]:
 func parse() -> void:
 	redraw_requested.emit()
 
-	var cache_path := "%s/animation_cache.res" % [folder]
+	var cache_path := "%s/Animation.res" % [folder]
 	if ResourceLoader.exists(cache_path):
 		var cached: TextureAtlasCache = load(cache_path)
 		if is_instance_valid(cached):

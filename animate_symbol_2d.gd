@@ -184,9 +184,7 @@ func _notification(what: int) -> void:
 			set_process(true)
 
 			if (not autoplay.is_empty()) and not Engine.is_editor_hint():
-				symbol = autoplay
-				frame = 0
-				playing = true
+				play(&"" if autoplay == &" " else autoplay)
 
 		NOTIFICATION_READY:
 			_last_backbuffer_transform = _get_backbuffer_transform()
